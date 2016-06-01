@@ -1,6 +1,8 @@
 # Instrumentation configuration
 The goal in this part of the workshop is to create a basic instrumentation for our sample application _DVD Store_.
 
+The prerequisite for this part is that you have finished the [setup part](SETUP.md) of the workshop. We also assume that you have your _DVD Store_ up and running with the inspectIT agent.
+
 ## Environment creation
 The first thing to do is to create a new environment that will be used by the inspectIT agent that runs within the sample application. From the **Instrumentation Manager** view click on the ![Add](images/add_obj.gif?raw=true) *Add* menu item and select the *Create Environment* option. Define the environment name (for example *DVD Store [dev]* or any that you like) and click on *Finish*.
 
@@ -83,7 +85,7 @@ Perform the following changes:
 2. Add new mapping:
 ``` 
 Active: ✓
-Agent name: DVD Store (same name you gave in the -Dinspectit.agent.name= option)
+Agent name: DVD_Store (same name you gave in the -Dinspectit.agent.name= option)
 IP address: *
 Environment: DVD Store [dev]
 ```
