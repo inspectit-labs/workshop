@@ -3,8 +3,11 @@ The goal in this part of the workshop is to create a basic instrumentation for o
 
 The prerequisite for this part is that you have finished the [setup part](SETUP.md) of the workshop. We also assume that you have your _DVD Store_ up and running with the inspectIT agent.
 
+## Configuration perspective
+For all the instrumentation configurations you need to perform you will need to switch to the ![Configuration perspective](images/compass.png?raw=true) *Configuration perspective*. As in all Eclipse-based application, perspective bar is available on the top-right of your application window.
+
 ## Environment creation
-The first thing to do is to create a new environment that will be used by the inspectIT agent that runs within the sample application. From the **Instrumentation Manager** view click on the ![Add](images/add_obj.gif?raw=true) *Add* menu item and select the *Create Environment* option. Define the environment name (for example *DVD Store [dev]* or any that you like) and click on *Finish*.
+The first thing to do is to create a new environment that will be used by the inspectIT agent that runs within the sample application. From the ![Instrumentation Manager](images/compass.png?raw=true) **Instrumentation Manager** view click on the ![Add](images/add_obj.gif?raw=true) *Add* menu item and select the *Create Environment* option. Define the environment name (for example *DVD Store [dev]* or any that you like) and click on *Finish*.
 
 You will notice that created Environment comes with some default settings.  For example several common profiles are already selected:
  - **[Common] Exclude classes** - defines the default exclude classes patterns. This profile should always be included to insure the correct functioning of the inspectIT agent.
@@ -15,7 +18,7 @@ Since this is the workshop we will change some of the default settings. In the *
 
 ## Profile definition
 ### Create new profile
-We need a profile where all our instrumentation points for the monitored application will be defined.  From the **Instrumentation Manager** view click on the ![Add](images/add_obj.gif?raw=true) *Add* menu item and select the *Create Profile* option. Define the profile name (for example *DVD Store [base profile]* or any that you like) and click on *Finish*.
+We need a profile where all our instrumentation points for the monitored application will be defined.  From the ![Instrumentation Manager](images/compass.png?raw=true) **Instrumentation Manager** view click on the ![Add](images/add_obj.gif?raw=true) *Add* menu item and select the *Create Profile* option. Define the profile name (for example *DVD Store [base profile]* or any that you like) and click on *Finish*.
 
 ### Define instrumentation points
 After creating the new profile does not contain any sensor assignment. We will add several instrumentations points for the Timer sensor and Exception sensor:
@@ -29,7 +32,7 @@ Method visibility: public
 ```
 
 ##### 2. All EJBs in the package *com.jboss.dvd*
-As our *DVD Store* application is using the Enterprise JavaBeans (EJB) in version 3.0, we would like to add timer sensor to all methods of all the EJBs that are defined in the package `com.jboss.dvd`. We know that EJB classes are annotated with the `javax.ejb.Stateless` or `javax.ejb.Stateful` annotations, thus we can use the *Annotation* option of the sensor assignment definition (note that we will need separate definition for each annotation):
+As our *DVD Store* application is using the Enterprise JavaBeans (EJB) in version 3.0, we would like to add timer sensor to all methods of all the EJBs that are defined in the package `com.jboss.dvd`. We know that EJB classes are annotated with the `javax.ejb.Stateless` or `javax.ejb.Stateful` annotations, thus we can use the *Annotation* option of the sensor assignment definition. Note that we will need separate definition for each annotation (*hint: You can use ![Duplicate](images/copy_edit.gif?raw=true) Duplicate button to copy assignments*):
 ```
 Fully Qualified Name: com.jboss.dvd*
 Annotation: javax.ejb.Stateless
@@ -81,6 +84,7 @@ Active | Agent Name | IP Address | Environment
 ✓ | * | * | Default Environment
 
 Perform the following changes:
+
 1. Deactivate existing mapping for the Default Environment
 2. Add new mapping:
 ``` 
@@ -90,7 +94,7 @@ IP address: *
 Environment: DVD Store [dev]
 ```
 
-After saving the mappings settings you need to restart the *DVD Store* application so that the new instrumentation configuration is applied.
+After saving the mappings settings you need to restart the *DVD Store* application so that the new instrumentation configuration is applied. After restart make sure that the new configuration working. Check the ![Instrumentation Browser](images/blue-document-tree.png?raw=true) *Instrumentation Browser* and see if new classes/methods are instrumented.
 
 ## Playground
 

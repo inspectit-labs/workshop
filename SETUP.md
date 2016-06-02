@@ -9,6 +9,9 @@ The installer is a *Executable Jar File (.jar)* so make sure that you open it wi
 * Central Management Repository (CMR, server)
 * inspectIT RCP App (rich user interface)
 
+##### ![Warning](images/warning_obj.gif?raw=true) Warning: Avoid whitespaces in installation path
+It's advised that the installation path you specify during installation does not have any whitespaces. This way you will not encounter any difficulties when you need to integrate inspectIT Agent using JVM parameters.
+
 ## Start CMR
 The Central Management Repository (CMR) is the main (server) component in inspectIT. As both agent(s) and inspectIT RCP App(s) are depending on the repository, we will start it first. Simply navigate to the CMR repository and run the *startup.sh* or *startup.bat* script.
 
@@ -28,17 +31,17 @@ Make sure to check the log and confirm that the CMR has started successfully. Yo
 ## Start inspectIT RCP App 
 The inspectIT user interface is also started quite easily. Navigate to the ```[INSTALLATION_DIR]/inspectit``` directory and run the *inspectIT* or *inspectIT.exe*.
 
-By default, when started the application will try to connect to the CMR listening on the *localhost:8182*. As we already started the CMR this connection should be successful. Make sure you check that by opening the ![Repository Manager View](images/server_instance.gif?raw=true) *Repository Manager View* and confirming that status of the *Local CMR* is ![On-line](images/server_online_16x16.png?raw=true) on-line.
+By default, when started the application will try to connect to the CMR listening on the *localhost:8182*. As we already started the CMR this connection should be successful. Make sure you check that by opening the ![Repository Manager View](images/server_instance.gif?raw=true) *Repository Manager View* and confirming that status of the *Local CMR* is ![On-line](images/server_online_16x16.png?raw=true) on-line (*hint: Hit F5 or click on ![Refresh](images/refresh.gif?raw=true) Refresh to update the view*).
 
 
-##### ![Warning](images/warning_obj.gif?raw=true) Warning Linux users
+##### ![Warning](images/warning_obj.gif?raw=true) Warning: Linux users
 On some Linux distributions there is a known Eclipse bug that can cause the first application start to fail. But don't worry. This bug is related to the Welcome screen displayed only the first time you run the application. Simply try starting the application for the second time and this bug should be overpassed.
 
 ## Setup the sample application
 As said we will use the _DVD Store_ application as the sample one for this workshop. This application runs on the JBoss 5.1 and it's a simple web application where you can buy DVDs.
 
 ### Unpack DVD Store
-The _DVD Store_ application is packed into a ZIP archive and you can find it alongside data files on the USB stick you received. Simply unpack the ZIP archive in a directory of your choosing and application should be ready for starting. You can test that application works by executing the *startJBoss.sh* or *startJBoss.bat* and opening ```localhost:8080/dvdstore``` in your browser.
+The _DVD Store_ application is packed into a ZIP archive and you can find it alongside data files on the USB stick you received. Simply unpack the ZIP archive in a directory of your choosing and application should be ready for starting. You can test that application works by executing the *startJBoss.sh* or *startJBoss.bat* and opening [localhost:8080/dvdstore](http://localhost:8080/dvdstore) in your browser.
 
 ### Integrate inspectIT agent
 As the last step in our setup process we need to attach the inspectIT agent to the Java process running the _DVD Store_. The integration is as simple as adding the following to the startup script of the Java application:
@@ -55,7 +58,7 @@ JAVA_OPTS="$JAVA_OPTS -javaagent:[INSPECTIT_AGENT_HOME]/inspectit-agent.jar -Din
 ```
 **run.conf.bat (Windows)**
 ```
-set "JAVA_OPTS=%JAVA_OPTS% -javaagent:[INSPECTIT_AGENT_HOME]/inspectit-agent.jar -Dinspectit.repository=localhost:9070 -Dinspectit.agent.name=DVD_Store"
+set "JAVA_OPTS=%JAVA_OPTS% -javaagent:[INSPECTIT_AGENT_HOME]\inspectit-agent.jar -Dinspectit.repository=localhost:9070 -Dinspectit.agent.name=DVD_Store"
 ```
 
 ## Get the first data
