@@ -18,7 +18,7 @@ Since this is the workshop we will change some of the default settings. In the *
 
 ## Profile definition
 ### Create new profile
-We need a profile where all our instrumentation points for the monitored application will be defined.  From the ![Instrumentation Manager](images/compass.png?raw=true) **Instrumentation Manager** view click on the ![Add](images/add_obj.gif?raw=true) *Add* menu item and select the *Create Profile* option. Define the profile name (for example *DVD Store [base profile]* or any that you like) and click on *Finish*.
+We need a profile where all our instrumentation points for the monitored application will be defined.  From the ![Instrumentation Manager](images/compass.png?raw=true) **Instrumentation Manager** view click on the ![Add](images/add_obj.gif?raw=true) *Add* menu item and select the *Create Profile* option. Define the profile name (for example *DVD Store [base profile]* or any that you like). For the profile type make sure that you select *Sensor assignment* and click on *Finish*.
 
 ### Define instrumentation points
 After creating the new profile does not contain any sensor assignment. We will add several instrumentations points for the Timer sensor and Exception sensor:
