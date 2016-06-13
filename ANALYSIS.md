@@ -14,7 +14,7 @@ The first problem that we will try to analyze is the *Slow Search*. Note that th
 On the *Application Performance Settings* activate the **Slow Search** problem. Then execute at least two searches on our shop (needs navigation to the *Shop*). For example we will search for:
 
 1. Batman and Superman
-2. Romantic Drama
+2. Interview with the Vampire
 
 You should already notice that the search action is taking few seconds to be executed.
 
@@ -34,7 +34,7 @@ Are you ready to make first assumptions why is this problem occurring? If so, te
 ## Refund calculation
 The refund calculation problem occurs during the checkout process, when the refund on purchase needs to be calculated for the user. This example can show that executing the same use case in different situations can produce different performance results.
 
-Start by activating the *Refund Calculation* performance problem on the *Application Performance Settings* page. Buy one or more movies. First do it as **user1** and then the second time buy the same movie(s) as **user8** (log-in credentials are user1/password and user8/password). 
+Start by activating the *Refund Calculation* performance problem on the *Application Performance Settings* page. Buy at least two or more movies. First do it as **user1** and then the second time buy the same movie(s) as **user8** (log-in credentials are user1/password and user8/password). 
 
 As in the previous problem analysis, first we need to locate the traces that hold the problem in question. You can try searching for the traces by the HTTP URL as in previous example. Or you can alternatively start from the ![Timer Data](images/method_time.gif?raw=true) *Timer data -> ![Show All](images/all_instances.gif?raw=true) Show All* view and check average duration of the all the monitored methods in the application. It should be easy to locate the methods that are responsible for the refund calculations and navigate to traces from these.
 

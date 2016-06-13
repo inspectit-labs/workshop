@@ -7,7 +7,7 @@ The prerequisite for this part is that you have finished the [setup part](SETUP.
 For all the instrumentation configurations you need to perform you will need to switch to the ![Configuration perspective](images/compass.png?raw=true) *Configuration perspective*. As in all Eclipse-based application, perspective bar is available on the top-right of your application window.
 
 ## Environment creation
-The first thing to do is to create a new environment that will be used by the inspectIT agent that runs within the sample application. From the ![Instrumentation Manager](images/compass.png?raw=true) **Instrumentation Manager** view click on the ![Add](images/add_obj.gif?raw=true) *Add* menu item and select the *Create Environment* option. Define the environment name (for example *DVD Store [dev]* or any that you like) and click on *Finish*.
+The first thing to do is to create a new environment that will be used by the inspectIT agent that runs within the sample application. From the ![Configuration Manager](images/compass.png?raw=true) **Configuration Manager** view click on the ![Add](images/add_obj.gif?raw=true) *Add* menu item and select the *Create Environment* option. Define the environment name (for example *DVD Store [dev]* or any that you like) and click on *Finish*.
 
 You will notice that created Environment comes with some default settings.  For example several common profiles are already selected:
  - **[Common] Exclude classes** - defines the default exclude classes patterns. This profile should always be included to insure the correct functioning of the inspectIT agent.
