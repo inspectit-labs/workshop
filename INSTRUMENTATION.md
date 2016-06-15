@@ -14,6 +14,8 @@ You will notice that created Environment comes with some default settings.  For 
  - **[Common] HTTP** - defines configuration for instrumenting the HTTP calls. As our application is web based, we will keep this profile included.
  - **[Commons] SQL** - defines configuration for instrumenting database calls. As out application uses H2 database in the back-end, we will also keep this profile included.
 
+For the beginning we will include additionally one more profile. As the application is using the Hibernate framework, please select the **[Common] Hibernate** profile as well.
+
 Since this is the workshop we will change some of the default settings. In the *Sensor Options* part set the string length limitation for all the sensor types to unlimited and activate the enhanced exception sensor. Save the changes.
 
 ## Profile definition

@@ -43,6 +43,9 @@ As said we will use the _DVD Store_ application as the sample one for this works
 ### Unpack DVD Store
 The _DVD Store_ application is packed into a ZIP archive and you can find it alongside data files on the USB stick you received. Simply unpack the ZIP archive in a directory of your choosing and application should be ready for starting. You can test that application works by executing the *startJBoss.sh* or *startJBoss.bat* and opening [localhost:8080/dvdstore](http://localhost:8080/dvdstore) in your browser.
 
+##### ![Warning](images/warning_obj.gif?raw=true) Warning: Windows users
+If the start of the *DVD Store* fails, please check your system path and ensure that it does not contain entries in the double quotes (for example ```"C:\some\path"```).
+
 ### Integrate inspectIT agent
 As the last step in our setup process we need to attach the inspectIT agent to the Java process running the _DVD Store_. The integration is as simple as adding the following to the startup script of the Java application:
 
