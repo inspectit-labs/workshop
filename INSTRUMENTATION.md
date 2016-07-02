@@ -85,7 +85,7 @@ Active | Agent Name | IP Address | Environment
 --- | --- | --- | ---
 ✓ | * | * | Default Environment
 
-Perform the following changes:
+Perform the following changes to create a new mapping that maps your DVD_Store agent to your DVD Store [dev] environment:
 
 1. Deactivate existing mapping for the Default Environment
 2. Add new mapping:
@@ -95,6 +95,12 @@ Agent name: DVD_Store (same name you gave in the -Dinspectit.agent.name= option)
 IP address: *
 Environment: DVD Store [dev]
 ```
+
+After performing the changes, you should see the new mapping:
+
+Active | Agent Name | IP Address | Environment
+--- | --- | --- | ---
+✓ | DVD_Store | * | DVD Store [dev]
 
 After saving the mappings settings you need to restart the *DVD Store* application so that the new instrumentation configuration is applied. After restart make sure that the new configuration working. Check the ![Instrumentation Browser](images/blue-document-tree.png?raw=true) *Instrumentation Browser* and see if new classes/methods are instrumented.
 
