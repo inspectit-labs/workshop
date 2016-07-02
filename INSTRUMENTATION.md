@@ -100,6 +100,7 @@ After performing the changes, you should see the new mapping:
 
 Active | Agent Name | IP Address | Environment
 --- | --- | --- | ---
+✗ | * | * | Default Environment
 ✓ | DVD_Store | * | DVD Store [dev]
 
 After saving the mappings settings you need to restart the *DVD Store* application so that the new instrumentation configuration is applied. After restart make sure that the new configuration working. Check the ![Instrumentation Browser](images/blue-document-tree.png?raw=true) *Instrumentation Browser* and see if new classes/methods are instrumented.
