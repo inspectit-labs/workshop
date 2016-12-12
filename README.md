@@ -6,3 +6,4 @@ The repository contains files needed for the inspectIT workshops. Please visit [
 2. [Instrumentation configuration](INSTRUMENTATION.md)
 3. [Performance analysis](ANALYSIS.md)
 4. [Collaboration](COLLABORATION.md)
+5. [Setup Monitoring](SETUP_MONITORING.md)
