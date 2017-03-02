@@ -11,8 +11,7 @@ Visit the [InfluxDB download page](https://www.influxdata.com/downloads/#influxd
 
 In the inspectIT UI open the ![Configure Repository](images/build.gif?raw=true) *Configure Repository* dialog and perform the following changes:
 
-1. In the preference page *Database* set the property **Write Data to influxDB** to true (On).
-2. In the preference page *influxDB* set the following properties:
+1. In the preference page *influxDB* set the following properties:
 
 Property | Value
 --- | ---
@@ -22,14 +21,19 @@ Username | root
 Password | root
 Database Name | inspectit
 
-In the log output of the CMR process you should see the following message: 
+2. In the preference page *Database* set the property **Write Data to influxDB** to true (On).
+
+Now, in the CMR details view, located in the **Respository Manager**, you should see that the status of the **InfluxDB** service is **connected**. Alternatively, you should see the followng message in the log output of the CMR process: 
 ```[service-thread-1] INFO  .server.influx.dao.InfluxDBDao - |-InfluxDB Service active and connected...```.
 
 ### Install Grafana
 Visit the [Grafana download page](http://grafana.org/download/) and install the Grafana distribution for your operating system. Start Grafana service. Verify that Grafana is running by visiting the Grafana's web-based UI located by default on [http://localhost:3000](http://localhost:3000). Login into the UI using the default credentials ```admin / admin```.
 
 
-The last thing to do is to connect Grafana to the **inspectit** database that we previously created in InfluxDB instance. Open the Grafana administration page (click on the icon in the top left corner) and select *Data Sources -> Add New*. Then add following information for the new data source:
+The last thing to do is to connect Grafana to the **inspectIT** database that we previously created in the InfluxDB instance. 
+
+1. Open the Grafana administration page (click on the icon in the top left corner) and select *Data Sources -> Add New*.
+2. Then add following information for the new data source:
 
 Property | Value
 --- | ---
