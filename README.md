@@ -7,3 +7,4 @@ The repository contains files needed for the inspectIT workshops. Please visit [
 3. [Performance analysis](ANALYSIS.md)
 4. [Collaboration](COLLABORATION.md)
 5. [Setup Monitoring](SETUP_MONITORING.md)
+6. [Business Transactions](BUSINESS_TRANSACTIONS.md)
