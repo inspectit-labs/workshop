@@ -12,18 +12,20 @@ The first thing to do is to create a new environment that will be used by the in
 You will notice that created Environment comes with some default settings.  For example several common profiles are already selected:
  - **[Common] Exclude classes** - defines the default exclude classes patterns. This profile should always be included to insure the correct functioning of the inspectIT agent.
  - **[Common] HTTP** - defines configuration for instrumenting the HTTP calls. As our application is web based, we will keep this profile included.
- - **[Commons] SQL** - defines configuration for instrumenting database calls. As out application uses H2 database in the back-end, we will also keep this profile included.
+ - **[Commons] SQL** - defines configuration for instrumenting database calls. As our application uses H2 database in the back-end, we will also keep this profile included.
 
 For the beginning we will include additionally one more profile. As the application is using the Hibernate framework, please select the **[Common] Hibernate** profile as well.
 
 Since this is the workshop we will change some of the default settings. In the *Sensor Options* part set the string length limitation for all the sensor types to unlimited and activate the enhanced exception sensor. Save the changes.
+
+Press ```CTRL + S``` to save the changes.
 
 ## Profile definition
 ### Create new profile
 We need a profile where all our instrumentation points for the monitored application will be defined.  From the ![Instrumentation Manager](images/compass.png?raw=true) **Instrumentation Manager** view click on the ![Add](images/add_obj.gif?raw=true) *Add* menu item and select the *Create Profile* option. Define the profile name (for example *DVD Store [base profile]* or any that you like). For the profile type make sure that you select *Sensor assignment* and click on *Finish*.
 
 ### Define instrumentation points
-After creating the new profile does not contain any sensor assignment. We will add several instrumentations points for the Timer sensor and Exception sensor:
+The new profile does not contain any sensor assignment. We will add several instrumentations points for the Timer sensor and Exception sensor:
 
 ##### 1. Public methods of ApplicationDispatcher
 For the warm up we would like to instrument all the public methods of the `org.apache.catalina.core.ApplicationDispatcher`.  In the **Sensor Definitions** page click on the ![Add](images/add_obj.gif?raw=true) *Add* option and select *Timer sensor*. In the assignment details perform following definition:
@@ -103,10 +105,19 @@ Active | Agent Name | IP Address | Environment
 ✗ | * | * | Default Environment
 ✓ | DVD_Store | * | DVD Store [dev]
 
-After saving the mappings settings you need to restart the *DVD Store* application so that the new instrumentation configuration is applied. After restart make sure that the new configuration working. Check the ![Instrumentation Browser](images/blue-document-tree.png?raw=true) *Instrumentation Browser* and see if new classes/methods are instrumented.
+After saving the mapping settings inspectIT recognizes that the DVD Store Agent does not have our instrumentation changes. Click ```Update``` on the dialog to send the new instrumentation to the DVD Store agent.
+
+
+![Update Agent Instrumentation](images/update_agent_instrumentation.png)
+
+After the update make sure that the new configuration works. Check the ![Instrumentation Browser](images/blue-document-tree.png?raw=true) *Instrumentation Browser* and see if new classes/methods are instrumented.
 
 ## Playground
 
 If you were faster than the workshop pace we don't want you to be bored.  Play around with the environment settings or the profile definition. For example, you can do one of the following:
-- Active the **[Commons] SQL Parameters** profile in the environment. When this profile is active all the SQLs reported bu inspectIT will have the actual parameter values instead of the '?'.
-- Explore the accessor path option when capturing context: catch return of the `com.jboss.dvd.seam.CheckoutAction.submitOrder()`, but catch the field *trackingNumber* of the returned *Order*
+- Active the **[Commons] SQL Parameters** profile in the environment. When this profile is active all the SQLs reported by inspectIT will have the actual parameter values instead of the '?'.
+- Explore the accessor path option when capturing context: catch return of the `com.jboss.dvd.seam.CheckoutAction.submitOrder()`, but catch the field *trackingNumber* of the returned *Order*. (*hint: Source Code of the DVD Store application is available in the zip archive*)
+
+## Hunt performance problems
+
+The instrumentation changes give as deeper visibility into the DVD Store application. This helps us to find the performance problems. Are you interested in hunting some performance problems? Proceed to the next section [Performance analysis](ANALYSIS.md).
