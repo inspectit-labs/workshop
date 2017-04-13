@@ -21,3 +21,7 @@ The *.itsd* file that you created can easily be sent to anyone having inspectIT.
 
 ### Import storage
 Importing of *.itsd* files is also possible via ![Storage Manager View](images/storage_overlay.gif?raw=true) *Storage Manager View*. Simply select the file to import and location. Location can be CMR repository or your local RCP app. If you imported the storage locally it will be visible in the ![Storage Manager View](images/storage_overlay.gif?raw=true) *Storage Manager View* if the **Show available: Local** is selected. You can open the storage and check if all the data you originally saved is correct.
+
+## Next level: Monitoring
+
+Enough with analysing problems and sharing them with others. Let's establish monitoring for our DVD Store application in section [Setup Monitoring](SETUP_MONITORING.md).

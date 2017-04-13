@@ -2,7 +2,7 @@
 The goal in this part of the workshop is to install all inspectIT components on your machine and to integrate the inspectIT agent in the sample application _DVD Store_. This application will be used as the demonstration application during this workshop.
 
 ## Install inspectIT
-The easiest and fastest way to install inspectIT is by running the installer. The installer(s) can be found on the [official GitHub repository](https://github.com/inspectIT/inspectIT/releases) or in the USB given to you at the beginning of the workshop. Note that for this workshop we will be using the inspectIT version 1.6.8.x. The installers are available for the Windows, Linux and Mac platform, so be careful which one you choose.
+The easiest and fastest way to install inspectIT is by running the installer. The installer(s) can be found on the [official GitHub repository](https://github.com/inspectIT/inspectIT/releases) or in the USB given to you at the beginning of the workshop. Note that for this workshop we will be using the inspectIT version 1.7.10.93. The installers are available for the Windows, Linux and Mac platform, so be careful which one you choose.
 
 The installer is a *Executable Jar File (.jar)* so make sure that you open it with the Java Runtime Platform. The installer will guide you through the installation of all inspectIT components. After the successful installation following inspectIT components will be installed:
 * Agent
@@ -73,4 +73,6 @@ Double-clicking on the agent item should open the ![Data Explorer View](images/c
 * ![System Overview](images/system-monitor.png?raw=true) *System Overview* can already deliver data about system utilization (CPU, memory, etc.)
 * If you open the *DVD Store* again in your browser, you will be able to see other data as well (like ![SQLs](images/database-sql.png?raw=true) SQLs, ![Timer Data](images/method_time.gif?raw=true) Timer Data, ![HTTP Data](images/discovery.gif?raw=true) HTTP Data, etc).
 
+## Deeper visibility with instrumentation
 
+If you played around with the different views you noticed that you already get some information out-of-the-box. In the next section [Instrumentation configuration](INSTRUMENTATION.md), we will create a basic set of instrumentation rules to increase the visibility into our DVD Store application.
