@@ -9,7 +9,7 @@ The installer is a *Executable Jar File (.jar)* so make sure that you open it wi
 * Central Management Repository (CMR, server)
 * inspectIT RCP App (rich user interface)
 
-##### ![Warning](images/warning_obj.gif?raw=true) Warning: Avoid whitespaces in installation path
+##### ![Warning](../images/warning_obj.gif?raw=true) Warning: Avoid whitespaces in installation path
 It's advised that the installation path you specify during installation does not have any whitespaces. This way you will not encounter any difficulties when you need to integrate inspectIT Agent using JVM parameters.
 
 ## Start CMR
@@ -31,10 +31,10 @@ Make sure to check the log and confirm that the CMR has started successfully. Yo
 ## Start inspectIT RCP App 
 The inspectIT user interface is also started quite easily. Navigate to the ```[INSTALLATION_DIR]/inspectit``` directory and run the *inspectIT* or *inspectIT.exe*.
 
-By default, when started the application will try to connect to the CMR listening on the *localhost:8182*. As we already started the CMR this connection should be successful. Make sure you check that by opening the ![Repository Manager View](images/server_instance.gif?raw=true) *Repository Manager View* and confirming that status of the *Local CMR* is ![On-line](images/server_online_16x16.png?raw=true) on-line (*hint: Hit F5 or click on ![Refresh](images/refresh.gif?raw=true) Refresh to update the view*).
+By default, when started the application will try to connect to the CMR listening on the *localhost:8182*. As we already started the CMR this connection should be successful. Make sure you check that by opening the ![Repository Manager View](../images/server_instance.gif?raw=true) *Repository Manager View* and confirming that status of the *Local CMR* is ![On-line](../images/server_online_16x16.png?raw=true) on-line (*hint: Hit F5 or click on ![Refresh](../images/refresh.gif?raw=true) Refresh to update the view*).
 
 
-##### ![Warning](images/warning_obj.gif?raw=true) Warning: Linux users
+##### ![Warning](../images/warning_obj.gif?raw=true) Warning: Linux users
 On some Linux distributions there is a known Eclipse bug that can cause the first application start to fail. But don't worry. This bug is related to the Welcome screen displayed only the first time you run the application. Simply try starting the application for the second time and this bug should be overpassed.
 
 ## Setup the sample application
@@ -43,7 +43,7 @@ As said we will use the _DVD Store_ application as the sample one for this works
 ### Unpack DVD Store
 The _DVD Store_ application is packed into a ZIP archive and you can find it alongside data files on the USB stick you received. Simply unpack the ZIP archive in a directory of your choosing and application should be ready for starting. You can test that application works by executing the *startJBoss.sh* or *startJBoss.bat* and opening [localhost:8080/dvdstore](http://localhost:8080/dvdstore) in your browser.
 
-##### ![Warning](images/warning_obj.gif?raw=true) Warning: Windows users
+##### ![Warning](../images/warning_obj.gif?raw=true) Warning: Windows users
 If the start of the *DVD Store* fails, please check your system path and ensure that it does not contain entries in the double quotes (for example ```"C:\some\path"```).
 
 ### Integrate inspectIT agent
@@ -65,14 +65,14 @@ set "JAVA_OPTS=%JAVA_OPTS% -javaagent:[INSPECTIT_AGENT_HOME]\inspectit-agent.jar
 ```
 
 ## Get the first data
-You need to restart the *DVD Store* application once you configured the start script. This will activate the inspectIT agent. Once you restarted the application, switch back to the inspectIT UI and make sure that the agent with the name *DVD_Store* in visible in the ![Repository Manager View](images/server_instance.gif?raw=true) *Repository Manager View* under the *Local CMR* repository. 
+You need to restart the *DVD Store* application once you configured the start script. This will activate the inspectIT agent. Once you restarted the application, switch back to the inspectIT UI and make sure that the agent with the name *DVD_Store* in visible in the ![Repository Manager View](../images/server_instance.gif?raw=true) *Repository Manager View* under the *Local CMR* repository. 
 
-Double-clicking on the agent item should open the ![Data Explorer View](images/catalog.gif?raw=true) *Data Explorer View* where you can see the data already sent by the agent. Feel free to explore a bit, check the following things:
+Double-clicking on the agent item should open the ![Data Explorer View](../images/catalog.gif?raw=true) *Data Explorer View* where you can see the data already sent by the agent. Feel free to explore a bit, check the following things:
 
-* ![Instrumentation Browser](images/blue-document-tree.png?raw=true) *Instrumentation Browser* shows you which classes are instrumented by default
-* ![System Overview](images/system-monitor.png?raw=true) *System Overview* can already deliver data about system utilization (CPU, memory, etc.)
-* If you open the *DVD Store* again in your browser, you will be able to see other data as well (like ![SQLs](images/database-sql.png?raw=true) SQLs, ![Timer Data](images/method_time.gif?raw=true) Timer Data, ![HTTP Data](images/discovery.gif?raw=true) HTTP Data, etc).
+* ![Instrumentation Browser](../images/blue-document-tree.png?raw=true) *Instrumentation Browser* shows you which classes are instrumented by default
+* ![System Overview](../images/system-monitor.png?raw=true) *System Overview* can already deliver data about system utilization (CPU, memory, etc.)
+* If you open the *DVD Store* again in your browser, you will be able to see other data as well (like ![SQLs](../images/database-sql.png?raw=true) SQLs, ![Timer Data](../images/method_time.gif?raw=true) Timer Data, ![HTTP Data](../images/discovery.gif?raw=true) HTTP Data, etc).
 
 ## Deeper visibility with instrumentation
 
-If you played around with the different views you noticed that you already get some information out-of-the-box. In the next section [Instrumentation configuration](INSTRUMENTATION.md), we will create a basic set of instrumentation rules to increase the visibility into our DVD Store application.
+If you played around with the different views you noticed that you already get some information out-of-the-box. In the next section [Instrumentation configuration](DVD_INSTRUMENTATION.md), we will create a basic set of instrumentation rules to increase the visibility into our DVD Store application.

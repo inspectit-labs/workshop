@@ -1,15 +1,15 @@
 # Setup business transactions
 The goal in this part of the workshop is to setup up logical applications and correlate the gathered data to business contexts.
 
-The prerequisite for this part is that you have finished the [setup monitoring part](SETUP_MONITORING.md) of the workshop.
+The prerequisite for this part is that you have finished the [setup monitoring part](DVD_SETUP_MONITORING.md) of the workshop.
 
 ### Creating a Business Context
 
 In inspectIT a business context represents an application and consists of application definitions and business transactions definitions. We're starting by creating an application context which relates the data to an application.
 
-At first, you have to switch to the ![Configuration perspective](images/compass.png?raw=true) *Configuration perspective*. As in all Eclipse-based application, perspective bar is available on the top-right of your application window.
+At first, you have to switch to the ![Configuration perspective](../images/compass.png?raw=true) *Configuration perspective*. As in all Eclipse-based application, perspective bar is available on the top-right of your application window.
 
-Open the ![Business Context Manager](images/briefcase.png?raw=true) **Business Context Manager** and click on the *Create Application* button. In the appearing dialog, you can specify the name of the apllication and assign a description, for example:
+Open the ![Business Context Manager](../images/briefcase.png?raw=true) **Business Context Manager** and click on the *Create Application* button. In the appearing dialog, you can specify the name of the apllication and assign a description, for example:
 
 Property | Value
 --- | ---
