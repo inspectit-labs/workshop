@@ -19,12 +19,12 @@ mvn clean install -PbuildDocker
 
 When the image is build you can start all applications: 
 ```
-docker-compose -f docker-compose-inspectIT.yml up -d
+docker-compose up -d
 ```
 
 During startup (this can take a few minutes) you can track services availability using Eureka dashboard available by default at http://localhost:8761. The inspectIT CMR is started automatically but the inspectIT UI has to be opened from the installed version. Navigate to the ```[INSTALLATION_DIR]/inspectit``` directory and run the *inspectIT* or *inspectIT.exe*. In the inspectIT UI five agents of the PetClinic Microservices application should be listed and connected. When the application is running it can be accessed here: http://localhost:8080. You can stop the application with: 
 ```
-docker-compose -f docker-compose-inspectIT.yml stop
+docker-compose stop
 ```
 
 ## Without Docker
